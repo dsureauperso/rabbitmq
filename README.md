@@ -93,7 +93,11 @@ In order to use a RabbitMQ cluster, the queues need to be of type **quorum** (in
 
 Quorum queues are declared with up to five replicas (one per node). On a 3-nodes cluster, each quorum queue will has 3 replicas, once on each node.
 
-Every quorum queue has a primary replica. That replica is called queue leader.
+Every quorum queue has a primary replica. That replica is called **queue leader**.
+
+In case of a node failure, a new queue leader will be elected. 
+
+The **queue_leader_locator** parameter is set to **balanced** in the configuration files to tell RabbitMQ to pick the node hosting the minimum number of quorum queue leaders.
 
 #### High Availability Proxy 
  
