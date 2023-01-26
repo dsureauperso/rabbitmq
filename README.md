@@ -63,9 +63,19 @@ In our example, it will receive the messages whose routing key do not match any 
 
 The RPC pattern is used when the producer awaits a response from the consumer.
 
-Doing RPC over RabbitMQ is quite easy. Once the server (i.e. any consumer) receives the message, it will publish a response in a callback queue the client (i.e. any producer) is listenning to.
+Doing RPC over RabbitMQ is quite easy: once the server (i.e. any consumer) receives the message, it will publish a response in a callback queue the client (i.e. any producer) is listenning to.
 
 We use a **correlation_id** to identify the upcoming request and its response sent back to the callback queue.
 
 ### Clustering / queues mirroring / load balancing
+
+Here are the main features we covered with this POC.
+
+A RabbitMQ cluster is a logical grouping of one or several nodes, each sharing users, virtual hosts, queues, exchanges, bindings, runtime parameters and other distributed state.
+
+In this example, we set up a 3-nodes RabbitMQ cluster.
+
+Clusters ensure the continuity of service in case of node falls. Clusters must have an odd number of nodes (1, 3, 5, etc.). A N-nodes cluster will still be active if at maximum N/2 + 1 node are in failure.
+
+In our example of 3 nodes, the service is sure to be OK with 1 node KO.
  
