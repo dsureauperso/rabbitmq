@@ -69,7 +69,7 @@ We use a **correlation_id** to identify the upcoming request and its response se
 
 ### Clustering / queues mirroring / load balancing
 
-Here are the main features we covered with this POC.
+Here are the main features we are covering with this POC.
 
 A RabbitMQ cluster is a logical grouping of one or several nodes, each sharing users, virtual hosts, queues, exchanges, bindings, runtime parameters and other distributed state.
 
