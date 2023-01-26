@@ -75,11 +75,26 @@ A RabbitMQ cluster is a logical grouping of one or several nodes, each sharing u
 
 In this example, we set up a 3-nodes RabbitMQ cluster.
 
-Clusters ensure the continuity of service in case of node falls. Clusters must have an odd number of nodes (1, 3, 5, etc.). A N-nodes cluster will still be active if at maximum N/2 + 1 node are in failure.
+Clusters ensure the continuity of service in case of node falls. Clusters must have an odd number of nodes (1, 3, 5, etc.). A N-nodes cluster will still be effective if, at maximum, N/2 + 1 node are up.
 
 In our example of 3 nodes, the service is sure to be OK with 1 node KO.
  
- // Data persistency
- // Queue mirroring
- // Continuity of service
+#### Data persistency
+
+To keep alive the queues and exchanges at container restart, we set the exchanges and queues as durable.
+
+We also mark the messages with deliveryMode = 2 (persistent).
+
+Once the queues and exchanges are **durable** and the messages are published as **persistent**, RabbitMQ will save the queued messages on disk in case of server restart.
+
+#### Queue replicas
+
+In order to use RabbitMQ cluster, the queues need to be of type **quorum** (in opposite with classic queues).
+
+Quorum queues are declared with up to five replicas (one per node). On a 3-nodes cluster, each quorum queue will has 3 replicas, once on each node.
+
+Every quorum queue has a primary replica. That replica is called queue leader.
+
+#### Continuity of service
+ 
  
