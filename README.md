@@ -65,7 +65,7 @@ The RPC pattern is used when the producer awaits a response from the consumer.
 
 Doing RPC over RabbitMQ is quite easy. Once the server (i.e. any consumer) receives the message, it will publish a response in a callback queue the client (i.e. any producer) is listenning to.
 
-We use a correlation_id to identify the upcoming request and its response sent back to the callback queue.
+We use a **correlation_id** to identify the upcoming request and its response sent back to the callback queue.
 
 ### Clustering / queues mirroring / load balancing
  
