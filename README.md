@@ -79,3 +79,7 @@ Clusters ensure the continuity of service in case of node falls. Clusters must h
 
 In our example of 3 nodes, the service is sure to be OK with 1 node KO.
  
+ // Data persistency
+ // Queue mirroring
+ // Continuity of service
+ 
