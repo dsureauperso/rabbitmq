@@ -61,6 +61,5 @@ A **Fanout** exchange simply ignores the bindings.
 
 
 
-### 3 nodes cluster / quorum queues
-
-### 
+### Clustering / queues mirroring / load balancing
+ 
