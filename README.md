@@ -87,14 +87,13 @@ We also mark the messages with deliveryMode = 2 (persistent).
 
 Once the queues and exchanges are **durable** and the messages are published as **persistent**, RabbitMQ will save the queued messages on disk in case of server restart.
 
-#### Queue replicas
+#### Queue replicas / continuity of service
 
-In order to use RabbitMQ cluster, the queues need to be of type **quorum** (in opposite with classic queues).
+In order to use a RabbitMQ cluster, the queues need to be of type **quorum** (in opposite with classic queues).
 
 Quorum queues are declared with up to five replicas (one per node). On a 3-nodes cluster, each quorum queue will has 3 replicas, once on each node.
 
 Every quorum queue has a primary replica. That replica is called queue leader.
 
-#### Continuity of service
- 
+#### High Availability Proxy 
  
