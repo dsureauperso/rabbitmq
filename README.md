@@ -101,3 +101,4 @@ The **queue_leader_locator** parameter is set to **balanced** in the configurati
 
 #### High Availability Proxy 
  
+We also use a HaProxy to balance the load equally between the different nodes. 
