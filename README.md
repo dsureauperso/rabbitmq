@@ -41,7 +41,7 @@ There are different exchange types:
 
 Each has his own ways to adress the queues.
 
-We'll mainly cover, in this article, the **Topic** and **Fanout** ones.
+We'll quickly cover, in this article, the **Topic** and **Fanout** ones.
 
 Note: a **binding** is a relationship between an exchange and a queue. 
 
@@ -56,6 +56,8 @@ A **Topic** exchange's logic is similar to a **Direct** one. **Topic** exchanges
 In our example, the Topic exchange acts like a Direct one.
 
 A **Fanout** exchange simply ignores the bindings.
+
+In our example, it will receive the messages whose routing key do not match any existing queue binding key.
 
 ### RPC - Remote Procedure Call
 
