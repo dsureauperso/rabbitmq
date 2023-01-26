@@ -21,6 +21,8 @@
 
 #### Fanout
 
+#### RPC - Remote Procedure Call
+
 ### 3 nodes cluster / quorum queues
 
 ### 
