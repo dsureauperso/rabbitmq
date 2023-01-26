@@ -97,7 +97,7 @@ Every quorum queue has a primary replica. That replica is called **queue leader*
 
 In case of a node failure, a new queue leader will be elected. 
 
-The **queue_leader_locator** parameter is set to **balanced** in the configuration files to tell RabbitMQ to pick the node hosting the minimum number of quorum queue leaders.
+The **queue_leader_locator** parameter is set to **balanced** in the configuration files to tell RabbitMQ to pick the node hosting the minimum number of quorum queue leaders as the new queue leader location.
 
 #### High Availability Proxy 
  
