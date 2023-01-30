@@ -21,3 +21,10 @@ node_modules/
 *.tgz
 
 .idea
+
+# Former directories
+consumer/
+consumer_3_rpc/
+producer/
+producer_2/
+producer_4/
