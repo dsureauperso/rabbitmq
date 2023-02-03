@@ -28,3 +28,6 @@ consumer_3_rpc/
 producer/
 producer_2/
 producer_4/
+consumer_2_dead_letter/
+consumer_4_dead_letter/
+producer_5_dead_letter/
